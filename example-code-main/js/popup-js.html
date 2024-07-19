@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Embed Popup Example</title>
+</head>
+<body>
+    <p>Popup loading in 3 seconds...</p>
+    <script type="module">
+        const agentInitScript = document.createElement("script");
+        agentInitScript.type = "module";
+        agentInitScript.innerHTML = `import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@0.0.1/dist/web.js'
+        Agent.initPopup({
+            agentName: "demo",
+            apiHost: "https://app.predictabledialogs.com/web/incoming",
+            autoShowDelay: 3000,
+        });
+        `;
+        document.body.append(agentInitScript);
+    </script>
+</body>
+</html>
+

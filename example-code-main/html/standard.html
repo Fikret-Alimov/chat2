@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Example</title>
+</head>
+<body>
+    <h1>Welcome to the Standard Agent Example!</h1>
+    <p>This is a basic HTML page with a standard chat agent embedded dynamically using JavaScript.</p>
+
+<script type="module">
+  import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js/dist/web.js'
+  Agent.initStandard({
+    agentName: "demo",
+    apiHost: "https://app.predictabledialogs.com/web/incoming"
+  });
+</script>
+<agent-standard style="width: 100%; height: 600px; "></agent-standard>
+
+</body>
+</html>
+

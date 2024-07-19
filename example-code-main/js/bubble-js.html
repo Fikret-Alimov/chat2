@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Embed Example</title>
+</head>
+<body>
+    <script type="module">
+        const agentInitScript = document.createElement("script");
+        agentInitScript.type = "module";
+        agentInitScript.innerHTML = `import Agent from 'https://cdn.jsdelivr.net/npm/@agent-embed/js@0.0.1/dist/web.js'
+        Agent.initBubble({
+            agentName: "demo",
+            apiHost: "https://app.predictabledialogs.com/web/incoming",
+            theme: {
+                button: { backgroundColor: "#2b3e13", iconColor: "#FFFFFF" },
+                chatWindow: { backgroundColor: "#fff" } 
+            },
+        });
+        `;
+        document.body.append(agentInitScript);
+    </script>
+</body>
+</html>
+
